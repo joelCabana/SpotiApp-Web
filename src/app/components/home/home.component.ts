@@ -11,14 +11,16 @@ export class HomeComponent  {
 
 
   nuevasCanciones: any[] = [];
-
+  loading:boolean;
   constructor(private spotify: SpotifyService) {
 
+    this.loading = true;
+
+    /**Obtiene los nuevos lanzamientos */
      this.spotify.getNewReleasses().subscribe(
        (data: any ) => {
-         // tslint:disable-next-line: no-string-literal
          this.nuevasCanciones = data;
-         console.log(this.nuevasCanciones);
+          this.loading = false;
        });
    }
 
