@@ -16,9 +16,8 @@ export class HomeComponent  {
 
      this.spotify.getNewReleasses().subscribe(
        (data: any ) => {
-         console.log(data.albums.items);
          // tslint:disable-next-line: no-string-literal
-         this.nuevasCanciones = data['albums'].items;
+         this.nuevasCanciones = data;
          console.log(this.nuevasCanciones);
        });
    }
