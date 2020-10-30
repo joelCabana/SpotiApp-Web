@@ -12,11 +12,14 @@ import { ArtistaComponent } from './components/artista/artista.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 
 
-// tslint:disable-next-line: comment-format
 //Pipe
 import { NoimagePipe } from './pipe/noimage.pipe';
+import { DomseguroPipe } from './pipe/domseguro.pipe';
+
+
 import { TarjetasComponent } from './components/tarjetas/tarjetas.component';
 import { LoadingComponent } from './components/shared/loading/loading.component';
+
 
 @NgModule({
   declarations: [
@@ -26,6 +29,7 @@ import { LoadingComponent } from './components/shared/loading/loading.component'
     ArtistaComponent,
     NavbarComponent,
     NoimagePipe,
+    DomseguroPipe,
     TarjetasComponent,
     LoadingComponent
   ],
