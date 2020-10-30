@@ -18,7 +18,7 @@ export class SearchComponent {
   /**Buscar el un artista por el nombre */
     buscar(termino: string){
     this.loading = true;
-    this.spotify.getArtista(termino).subscribe(
+    this.spotify.getArtistas(termino).subscribe(
       (data: any) => {
         this.artistas = data;
         this.loading = false;
